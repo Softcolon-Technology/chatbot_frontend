@@ -13,8 +13,6 @@ const ImageNode: FC<NodeProps<ImageNodeData>> = ({ id }) => {
 
   const { data, selected } = getNode(id);
 
-  console.log('rerender')
-
   // check if the node is allowed to be connected to another node
   // not checking on target as target can have any no of connections
   const allowSourceConnection = getSourceConnectionAllowed(id);

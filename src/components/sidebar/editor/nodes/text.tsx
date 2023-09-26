@@ -1,8 +1,8 @@
-import { ChangeEvent, FC, useCallback } from "react";
-import { TextNode } from "../../../flow-zone/nodes/typings";
 import { css } from "@emotion/react";
-import useStore, { selector } from "../../../flow-zone/store";
+import { ChangeEvent, FC, useCallback } from "react";
 import { shallow } from "zustand/shallow";
+import { TextNode } from "../../../flow-zone/nodes/typings";
+import useStore, { selector } from "../../../flow-zone/store";
 
 const TextNodeDataEditor: FC<TextNode> = ({ id, type }) => {
   const { getNode, changeNodeData } = useStore(selector, shallow);
@@ -11,11 +11,6 @@ const TextNodeDataEditor: FC<TextNode> = ({ id, type }) => {
 
   const onTextAreaChange = useCallback(
     (e: ChangeEvent<HTMLTextAreaElement>) => {
-      console.log({
-        ...state,
-        type,
-        data: { ...state.data, [e.target.name]: e.target.value },
-      });
       if (!state) return;
 
       changeNodeData({

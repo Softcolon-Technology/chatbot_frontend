@@ -11,17 +11,8 @@ const QuestionNodeDataEditor: FC<QuestionNode> = ({ type, id }) => {
     const [option, setOption] = useState<string>("")
 
     const state = getNode(id);
-
-    console.log({ state, option });
-
-
     const onTextAreaChange = useCallback(
         (e: ChangeEvent<HTMLTextAreaElement>) => {
-            console.log({
-                ...state,
-                type,
-                data: { ...state.data, [e.target.name]: e.target.value },
-            });
             if (!state) return;
 
             changeNodeData({
@@ -35,7 +26,6 @@ const QuestionNodeDataEditor: FC<QuestionNode> = ({ type, id }) => {
 
     const onAddOption = useCallback(
         () => {
-            console.log({ ...state.data, ["options"]: [...state.data.options, option] }, option);
             if (option.length == 0) {
                 return alert("add option first")
             }
@@ -52,12 +42,8 @@ const QuestionNodeDataEditor: FC<QuestionNode> = ({ type, id }) => {
     );
 
     const removeOption = useCallback((index) => {
-        console.log({ index });
-
         const newData = state.data.options.findIndex((_el, _index) => _index == index)
-
         const newOption = state.data.options.filter((_el, index) => index != newData)
-        console.log({ newData, newOption });
         addOption({
             ...state,
             type,

@@ -13,7 +13,7 @@ const ImageNodeDataEditor: FC<ImageNode> = ({ type, id }) => {
 
   const onInputChange = useCallback(
     (e: ChangeEvent<HTMLInputElement>) => {
-      console.log(state, e.target.value);
+
       if (!state) return;
 
       changeNodeData({
@@ -27,7 +27,6 @@ const ImageNodeDataEditor: FC<ImageNode> = ({ type, id }) => {
 
   const onTextAreaChange = useCallback(
     (e: ChangeEvent<HTMLTextAreaElement>) => {
-      console.log(state, e.target.value);
       if (!state) return;
 
       changeNodeData({

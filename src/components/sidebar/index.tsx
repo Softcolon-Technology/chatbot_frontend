@@ -22,7 +22,6 @@ const Sidebar: FC<SidebarProps> = ({ nodes }) => {
 
   useOnSelectionChange({
     onChange: (elements) => {
-      console.log(elements);
       if (elements.nodes.length > 0) {
         setSelectedNodes(elements.nodes as Array<Nodes>);
       } else {

@@ -71,26 +71,12 @@ const QuestionNode: FC<Props> = ({ id }) => {
                         <Handle
                             key={index}
                             type="source"
-                            // isConnectable={allowSourceConnection}
-                            // isConnectableStart={allowSourceConnection}
                             position={Position.Right}
                             id={`source-${index}`}
                             style={{ background: '#fff', top: "50%", right: 10, boxShadow: "rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset" }}
                         />
                     </div>
                 ))}
-            {/* <div
-                css={css`
-          background: white;
-          padding: 12px 16px;
-          border-radius: 0 0 8px 8px;
-        `}
-            >
-                {data.options &&
-                    data.options.map((option, index) => (
-                        <div key={index}>{option}</div>
-                    ))}
-            </div> */}
         </div>
     );
 };
