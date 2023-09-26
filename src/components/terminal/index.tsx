@@ -10,7 +10,7 @@ const Terminal = () => {
         edges: state.edges,
     }));
     const [isDragging, setIsDragging] = useState(false);
-    const [footerHeight, setFooterHeight] = useState<number>(100);
+    const [footerHeight, setFooterHeight] = useState<number>(200);
 
     const startYRef = useRef(0);
 
@@ -25,7 +25,7 @@ const Terminal = () => {
             const deltaY = startYRef.current - e.clientY;
             const newHeight = footerHeight + deltaY;
 
-            const minHeight = 50;
+            const minHeight = 8;
             const maxHeight = 400;
 
             if (newHeight >= minHeight && newHeight <= maxHeight) {
