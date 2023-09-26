@@ -26,11 +26,11 @@ const Header = () => {
     });
 
     // if there are more than one node with no target throw error
-    if (nodesWithNoTarget.length > 1) {
-      alert("There are more than one node with no target");
-      setSaving(false);
-      return;
-    }
+    // if (nodesWithNoTarget.length > 1) {
+    //   alert("There are more than one node with no target");
+    //   setSaving(false);
+    //   return;
+    // }
 
     // save the data to local storage for now
     // To save to API just put a fetch request here

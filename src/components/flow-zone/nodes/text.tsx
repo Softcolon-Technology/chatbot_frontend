@@ -1,9 +1,9 @@
-import { FC } from "react";
-import { Handle, NodeProps, Position } from "reactflow";
 import { css } from "@emotion/react";
 import { MessageCircle } from "lucide-react";
-import { TextNodeData } from "./typings";
+import { FC } from "react";
+import { Handle, NodeProps, Position } from "reactflow";
 import useStore from "../store";
+import { TextNodeData } from "./typings";
 
 const TextNode: FC<NodeProps<TextNodeData>> = ({ id }) => {
   const { getSourceConnectionAllowed, getNode } = useStore(
@@ -16,7 +16,10 @@ const TextNode: FC<NodeProps<TextNodeData>> = ({ id }) => {
 
   return (
     <>
-      <Handle type="target" position={Position.Left} id="target" />
+      <Handle type="target" position={Position.Left} id="target"
+        style={{ background: '#fff', boxShadow: "rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset" }}
+
+      />
       <div
         css={css(
           css`
@@ -60,6 +63,8 @@ const TextNode: FC<NodeProps<TextNodeData>> = ({ id }) => {
         isConnectableStart={allowSourceConnection}
         position={Position.Right}
         id="source"
+        style={{ background: '#fff', boxShadow: "rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset" }}
+
       />
     </>
   );

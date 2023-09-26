@@ -15,21 +15,7 @@ import { DropTargetMonitor } from "react-dnd";
 import { NodeData, Nodes, NodeTypes } from "./nodes/typings";
 
 const initialDummyNodes: Node<NodeData, NodeTypes>[] = [
-  {
-    id: "1",
-    position: { x: 100, y: 100 },
-    data: { text: "text message" },
-    type: NodeTypes.Text,
-  },
-  {
-    id: "2",
-    position: { x: 420, y: 220 },
-    data: {
-      url: "https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/paris-jaco-marx.jpg",
-      caption: "Wanna get a free trip to Paris?",
-    },
-    type: NodeTypes.Image,
-  },
+
 ];
 
 export const dummyNode = {

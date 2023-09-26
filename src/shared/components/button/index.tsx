@@ -1,6 +1,6 @@
-import { FC, MouseEventHandler, ReactNode } from "react";
 import { css } from "@emotion/react";
 import { Loader2 } from "lucide-react";
+import { FC, MouseEventHandler, ReactNode } from "react";
 
 interface ButtonProps {
   children: ReactNode;
