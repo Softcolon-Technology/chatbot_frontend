@@ -60,7 +60,7 @@ const Header = () => {
         border-bottom: 2px solid lightblue;
       `}
     >
-      <p>Chat Bot</p>
+      <p>BotWiz</p>
       <Button loading={saving} onClick={onSave}>
         {saved ? "Saved" : "Save"}
       </Button>
