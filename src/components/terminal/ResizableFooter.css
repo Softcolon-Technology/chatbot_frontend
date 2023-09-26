@@ -1,0 +1,22 @@
+.resizable-footer {
+    position: relative;
+    background-color: #f0f0f0;
+    overflow: hidden;
+}
+
+.drag-handle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background-color: #007bff;
+    cursor: ns-resize;
+}
+
+.footer-content {
+    background-color: #ffffff;
+    padding: 10px;
+    overflow: auto;
+    border-top: 1px solid #ccc;
+}

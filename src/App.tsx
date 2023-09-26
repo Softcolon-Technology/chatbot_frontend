@@ -7,6 +7,7 @@ import { NodeTypes } from "./components/flow-zone/nodes/typings";
 import Header from "./components/header";
 import Sidebar from "./components/sidebar";
 import { Styles } from "./components/styles";
+import Terminal from "./components/terminal";
 
 
 function App() {
@@ -53,7 +54,9 @@ function App() {
               <FlowZone />
               <Sidebar nodes={nodes} />
             </div>
+            <Terminal />
           </ReactFlowProvider>
+
         </DndProvider>
       </div>
     </>

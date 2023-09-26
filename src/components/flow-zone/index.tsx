@@ -40,6 +40,8 @@ const FlowZone = () => {
       onDrop(item, monitor),
   });
 
+  const proOptions = { hideAttribution: true };
+
   return (
     <div css={css``}>
       <ReactFlow
@@ -47,6 +49,7 @@ const FlowZone = () => {
         nodes={nodes}
         edges={edges}
         onNodesChange={onNodesChange}
+        proOptions={proOptions}
         onEdgesChange={onEdgesChange}
         onConnect={onConnect}
         onNodesDelete={() => {
