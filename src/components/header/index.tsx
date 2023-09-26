@@ -1,6 +1,7 @@
 import { css } from "@emotion/react";
 import { useCallback, useEffect, useState } from "react";
 import Button from "../../shared/components/button";
+import { createCombinedData } from "../../utils/helper";
 import useStore from "../flow-zone/store";
 
 const Header = () => {
@@ -9,6 +10,8 @@ const Header = () => {
     nodes: state.nodes,
     edges: state.edges,
   }));
+
+  console.log("Test", createCombinedData(nodes, edges))
 
   const [saved, setSaved] = useState(false);
 

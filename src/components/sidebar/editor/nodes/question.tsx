@@ -127,7 +127,7 @@ const QuestionNodeDataEditor: FC<QuestionNode> = ({ type, id }) => {
             }>
                 {
                     state.data.options.map((_el, index) => (
-                        <div css={
+                        <div key={index} css={
                             css`
                             position: relative
                             `

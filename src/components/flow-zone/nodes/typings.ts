@@ -15,14 +15,9 @@ export interface ImageNodeData {
   url: string;
 }
 
-export interface OptionData {
-  option: string;
-  position: number
-}
-
 export interface QuestionNodeData {
   question: string,
-  options: OptionData[]
+  options: string[]
 }
 
 export interface TextNode extends Node<TextNodeData, NodeTypes.Text> {
