@@ -1,10 +1,12 @@
 import { css } from "@emotion/react";
 import { useCallback, useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Button from "../../shared/components/button";
 import useStore from "../flow-zone/store";
 
 const Header = () => {
   const [saving, setSaving] = useState(false);
+  const navigate = useNavigate()
   const { nodes, edges } = useStore((state) => ({
     nodes: state.nodes,
     edges: state.edges,
@@ -61,9 +63,22 @@ const Header = () => {
       `}
     >
       <p>BotWiz</p>
-      <Button loading={saving} onClick={onSave}>
-        {saved ? "Saved" : "Save"}
-      </Button>
+
+      <div css={css`
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      `}>
+        <p css={css`margin: 0;
+          cursor: pointer;
+        `} onClick={() => navigate("/org")}>
+          Org Chart
+        </p>
+        <Button loading={saving} onClick={onSave}>
+          {saved ? "Saved" : "Save"}
+        </Button>
+      </div>
     </div>
   );
 };
